@@ -1,0 +1,5 @@
+name: GitHub OAuth group membership enforcement
+description: Only allow users in a certain GitHub group to login via Girder OAuth
+version: 0.1.0
+dependencies:
+  - oauth
