@@ -16,7 +16,7 @@ def _checkUser(event):
         }
         resp = requests.get('https://api.github.com/user/orgs', headers=headers)
         orgs = [org['login'] for org in resp.json()]
-        if _REQUIRED_ORGS - set(orgs):
+        if _REQUIRED_ORGS & set(orgs):
             raise AccessException('This user is not a member of the required GitHub org.')
 
 
